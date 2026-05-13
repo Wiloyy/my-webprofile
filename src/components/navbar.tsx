@@ -33,7 +33,7 @@ export default function NavBar() {
       <Link
         key={route.href}
         href={route.href}
-        className="text-white text-lg px-4 block hover:scale-110 transition-transform right-0"
+        className="text-white text-lg px-4 block hover:scale-110 transition-transform"
       >
         {route.label}
       </Link>
