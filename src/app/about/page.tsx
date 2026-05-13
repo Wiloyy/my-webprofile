@@ -1,7 +1,12 @@
+import Background from "@/components/background";
+
 export default function About() {
   return (
     <>
-      <div className="bg-[url('/image/bgPages.png')] bg-cover bg-center min-h-screen"></div>
+      <Background />
+      <div className="relative h-screen">
+        <h1 className="text-3xl font-bold">About Us</h1>
+      </div>
     </>
   );
 }

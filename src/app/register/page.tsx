@@ -1,7 +1,10 @@
+import Background from "@/components/background";
+
 export default function Register() {
   return (
     <>
-      <div className="bg-[url('/image/bgPages.png')] bg-cover bg-center min-h-screen">
+      <Background />;
+      <div className="relative h-screen">
         <h1> Voce esta no register </h1>
       </div>
     </>

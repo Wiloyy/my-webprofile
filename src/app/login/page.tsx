@@ -1,7 +1,10 @@
+import Background from "@/components/background";
+
 export default function Login() {
   return (
     <>
-      <div className="bg-[url('/image/bgPages.png')] bg-cover bg-center min-h-screen">
+      <Background />;
+      <div className="relative h-screen">
         <h1 className=""> Voce esta no login </h1>
       </div>
     </>
