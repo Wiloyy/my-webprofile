@@ -4,6 +4,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const routes = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/register", label: "Register" },
+  { href: "/login", label: "Login" },
+];
+
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -20,20 +27,13 @@ export default function NavBar() {
     classesAnimacao = "opacity-0 -translate-x-5 max-h-0 pointer-events-none";
   }
 
-  const routes = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/register", label: "Register" },
-    { href: "/login", label: "Login" },
-  ];
-
   const links = routes
     .filter((route) => route.href !== pathname)
     .map((route) => (
       <Link
         key={route.href}
         href={route.href}
-        className="text-white text-lg px-4 block hover:scale-110 transition-transform"
+        className="text-white text-lg px-4 block hover:scale-110 transition-transform right-0"
       >
         {route.label}
       </Link>
@@ -41,10 +41,10 @@ export default function NavBar() {
 
   return (
     <>
-      <div className="relative flex justify-end mr-5">
+      <div className="fixed top-0 right-0 z-50">
         <button
           onClick={toggleMenu}
-          className="bg-[url('/image/imgNav.png')] bg-cover bg-center w-[45px] h-[45px] hover:scale-110 active:scale-95 transition-transform"
+          className="bg-[url('/image/imgNav.png')] bg-cover bg-center w-[45px] h-[45px] hover:scale-110 active:scale-95 transition-transform "
         ></button>
 
         <div className="absolute top-[50px] right-0 overflow-hidden">
