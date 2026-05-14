@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 const routes = [
   { href: "/", label: "Home" },
@@ -14,6 +15,10 @@ const routes = [
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
