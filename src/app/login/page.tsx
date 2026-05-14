@@ -1,6 +1,7 @@
 import Background from "@/components/background";
 import Image from "next/image";
 import circuloBanco from "@/../public/image/circuloBranco.png";
+import Link from "next/link";
 
 export default function Login() {
   return (
@@ -13,7 +14,6 @@ export default function Login() {
             alt="Círculo Banco"
             width={210}
             height={210}
-            className=""
           />
           <div className="bg-transparent p-4">
             <label htmlFor="email" className="sr-only">
@@ -35,12 +35,22 @@ export default function Login() {
               className="bg-transparent border-b border-white text-white placeholder:text-white focus:outline-none block mt-4 w-full"
             />
             <div className="flex items-center flex-row gap-2">
-              <button className="bg-transparent border border-white text-white px-3 py-1 mt-2 text-sm hover:bg-white hover:text-black transition-colors duration-300">
-                Login
-              </button>
-              <button className="bg-transparent border border-white text-white px-3 py-1 mt-2 ml-auto text-sm hover:bg-white hover:text-black transition-colors duration-300">
-                Register
-              </button>
+              <Link href="/">
+                <button
+                  type="button"
+                  className="bg-transparent border border-white text-white px-3 py-1 mt-2 text-sm hover:bg-white hover:text-black transition-colors duration-300"
+                >
+                  Login
+                </button>
+              </Link>
+              <Link href="/register" className="ml-auto">
+                <button
+                  type="button"
+                  className="bg-transparent border border-white text-white px-3 py-1 mt-2 text-sm hover:bg-white hover:text-black transition-colors duration-300"
+                >
+                  Register
+                </button>
+              </Link>
             </div>
           </div>
         </div>
