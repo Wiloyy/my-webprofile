@@ -49,7 +49,9 @@ export default function NavBar() {
       <div className="fixed top-0 right-0 z-50">
         <button
           onClick={toggleMenu}
-          className="bg-[url('/image/imgNav.png')] bg-cover bg-center w-[45px] h-[45px] hover:scale-110 active:scale-95 transition-transform "
+          aria-label="Abrir menu"
+          aria-expanded={isMenuOpen}
+          className="bg-[url('/image/imgNav.png')] bg-cover bg-center w-[45px] h-[45px] hover:scale-110 active:scale-95 transition-transform"
         ></button>
 
         <div className="absolute top-[50px] right-0 overflow-hidden">
