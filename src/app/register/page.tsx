@@ -14,7 +14,6 @@ export default function Register() {
             alt="Círculo Banco"
             width={210}
             height={210}
-            className=""
           />
           <div className="bg-transparent p-4">
             <label htmlFor="email" className="sr-only">
