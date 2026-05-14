@@ -27,9 +27,11 @@ export default function NavBar() {
   let classesAnimacao = "";
 
   if (isMenuOpen === true) {
-    classesAnimacao = "opacity-100 translate-x-0 max-h-40";
+    classesAnimacao =
+      "opacity-100 translate-x-0 max-h-40 bg-white/10 backdrop-blur-md border border-white/20 rounded-md pointer-events-auto";
   } else {
-    classesAnimacao = "opacity-0 -translate-x-5 max-h-0 pointer-events-none";
+    classesAnimacao =
+      "opacity-0 -translate-x-5 max-h-0 pointer-events-none rounded-md border border-white/20";
   }
 
   const links = routes
